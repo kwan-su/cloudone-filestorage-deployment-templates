@@ -1,5 +1,5 @@
-output "scanner_stacks_ouputs" {
-  value = module.scanner_stacks.scanner_stacks_ouputs
+output "scanner_stacks_outputs" {
+  value = module.scanner_stacks.scanner_stacks_outputs
 }
 
 output "scanner_informations" {

@@ -1,3 +1,3 @@
-output "storage_stacks_ouputs" {
-  value = module.storage_stacks.storage_stacks_ouputs
+output "storage_stacks_outputs" {
+  value = module.storage_stacks.storage_stacks_outputs
 }

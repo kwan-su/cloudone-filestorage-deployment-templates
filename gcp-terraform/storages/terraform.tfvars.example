@@ -9,7 +9,7 @@ storageStacks = {
         scannerProjectID = "fss-scanner-project-id"
         scannerTopic = "fss-scanner-topic-name"
         scannerServiceAccountID = "fss-scanner-service-account"
-        reportObjectKey = null
-        disableScanningBucketIAMBinding = null
+        reportObjectKey = false
+        disableScanningBucketIAMBinding = false
     }
 }

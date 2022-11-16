@@ -1,4 +1,4 @@
-output "storage_stacks_ouputs" {
+output "storage_stacks_outputs" {
   value = <<-EOT
     ${jsonencode({
         "storageStacks": [for k, v in local.storage_stacks : {"deploymentName": "${k}", "projectID": "${var.projectID}"}],

@@ -70,10 +70,10 @@ Storage stack:
 6. **scannerProjectID**: Copy and paste the service account information from the File Storage Security console.
 7. **scannerServiceAccountID**: Copy and paste the service account information from the File Storage Security console.
 8. **scannerTopic**: Copy and paste the service account information from the File Storage Security console.
-9. **reportObjectKey**: Select ‘True’ to report the object keys of the scanned objects to File Storage Security backend services. File Storage Security can then display the object keys of the malicious objects in the response of events API. Allows values "True', 'False'.
+9. **reportObjectKey**: Select `true` to report the object keys of the scanned objects to File Storage Security backend services. File Storage Security can then display the object keys of the malicious objects in the response of events API. Allows values `true`, `true`.
 
 > **Tips**:
- `scanner` is only required in all-in-one deployment, so the default value should be `null`. `disableScanningBucketIAMBinding` is required by converting from the GCP Deployment Manager's deployment, if it's a new deployment should be `null`.
+ `scanner` is only required in all-in-one deployment, so the default value should be `null`. `disableScanningBucketIAMBinding` is required by converting from the GCP Deployment Manager's deployment, if it's a new deployment should be `false`.
 
 ```sh
 {
@@ -88,8 +88,8 @@ Storage stack:
       "scannerProjectID": "<SCANNER_STACK_PROJECT_ID>",
       "scannerTopic": "<SCANNER_STACK_PUBSUB_TOPIC_NAME>",
       "scannerServiceAccountID": "<SCANNER_STACK_SERVICE_ACCOUNT_ID>",
-      "reportObjectKey": null,
-      "disableScanningBucketIAMBinding": null,
+      "reportObjectKey": false,
+      "disableScanningBucketIAMBinding": false,
       "scanner": null
     }
   }
@@ -109,7 +109,7 @@ terraform -chdir=storages init  && \
 
 To complete the deployment process, once the stacks are deployed, follow the steps to configure management role:
 
-1. Copy the JSON content of `storage_stacks_ouputs` from the Cloud Shell output of Terraform.
+1. Copy the JSON content of `storage_stacks_outputs` from the Cloud Shell output of Terraform.
 2. Paste the content back to the File Storage Security console.
 
 > **Tip**:

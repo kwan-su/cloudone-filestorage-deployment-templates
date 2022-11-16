@@ -76,10 +76,10 @@ Storage stack:
 4. **region**: Specify the region of your bucket. For the list of supported GCP regions, please see [Supported GCP Regions](https://cloudone.trendmicro.com/docs/file-storage-security/supported-gcp/).
 5. **managementServiceAccountProjectID**: Copy and paste the service account information from the File Storage Security console.
 6. **managementServiceAccountID**: Copy and paste the service account information from the File Storage Security console.
-7. **reportObjectKey**: Select ‘True’ to report the object keys of the scanned objects to File Storage Security backend services. File Storage Security can then display the object keys of the malicious objects in the response of events API. Allows values "True', 'False'.
+7. **reportObjectKey**: Select `true` to report the object keys of the scanned objects to File Storage Security backend services. File Storage Security can then display the object keys of the malicious objects in the response of events API. Allows values `true`, `false`.
 
 > **Tips**:
-`scannerProjectID`, `scannerTopic`, `scannerServiceAccountID` should be `null` in All-in-One deployment. `disableScanningBucketIAMBinding` is required by converting from the GCP Deployment Manager's deployment, if it's a new deployment should be `null`.
+`scannerProjectID`, `scannerTopic`, `scannerServiceAccountID` should be `null` in All-in-One deployment. `disableScanningBucketIAMBinding` is required by converting from the GCP Deployment Manager's deployment, if it's a new deployment should be `false`.
 
 ```sh
 {
@@ -102,8 +102,8 @@ Storage stack:
       "scannerProjectID": null,
       "scannerTopic": null,
       "scannerServiceAccountID": null,
-      "reportObjectKey": null,
-      "disableScanningBucketIAMBinding": null
+      "reportObjectKey": false,
+      "disableScanningBucketIAMBinding": false
     }
   }
 }

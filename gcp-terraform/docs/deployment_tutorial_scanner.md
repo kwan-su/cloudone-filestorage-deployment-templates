@@ -97,7 +97,7 @@ terraform -chdir=scanners init  && \
 
 To complete the deployment process, once the stacks are deployed, follow the steps to configure management role:
 
-1. Copy the JSON content of `scanner_stacks_ouputs` from the Cloud Shell output of Terraform.
+1. Copy the JSON content of `scanner_stacks_outputs` from the Cloud Shell output of Terraform.
 2. Paste the content back to the File Storage Security console.
 
 > **Tip**:

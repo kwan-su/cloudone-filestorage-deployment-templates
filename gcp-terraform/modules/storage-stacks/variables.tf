@@ -8,7 +8,7 @@ variable "storageStacks" {
     region = string
     managementServiceAccountProjectID = string
     managementServiceAccountID = string
-    reportObjectKey = bool
+    reportObjectKey = string
     disableScanningBucketIAMBinding = bool
   }))
 }

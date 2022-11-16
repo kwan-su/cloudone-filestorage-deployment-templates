@@ -16,7 +16,7 @@ storageStacks = {
         scannerProjectID = null
         scannerTopic = null
         scannerServiceAccountID = null
-        reportObjectKey = null
-        disableScanningBucketIAMBinding = null
+        reportObjectKey = false
+        disableScanningBucketIAMBinding = false
     }
 }

@@ -37,8 +37,8 @@ locals {
       region = v.region
       managementServiceAccountProjectID = v.managementServiceAccountProjectID
       managementServiceAccountID = v.managementServiceAccountID
-      reportObjectKey = v.reportObjectKey == null ? false : true
-      disableScanningBucketIAMBinding = v.disableScanningBucketIAMBinding == null ? false : true
+      reportObjectKey = v.reportObjectKey ? "True" : "False"
+      disableScanningBucketIAMBinding = v.disableScanningBucketIAMBinding
       prefix = substr(trimsuffix(deployment_name, "-storage"), 0, 17)
     }
   }

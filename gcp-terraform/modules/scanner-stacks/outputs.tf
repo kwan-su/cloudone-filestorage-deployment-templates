@@ -1,4 +1,4 @@
-output "scanner_stacks_ouputs" {
+output "scanner_stacks_outputs" {
   value = <<-EOT
     ${jsonencode({
         "scannerStacks": [for k, v in local.scanner_stacks : {"deploymentName": "${k}", "projectID": "${var.projectID}"}],
